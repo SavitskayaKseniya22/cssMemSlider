@@ -29,6 +29,9 @@ body {
     display: flex;
     flex-wrap: wrap;
 
+
+
+
 }
 
 .slides {
@@ -64,7 +67,38 @@ input {
     display: none;
 }
 
+#radio1:checked~.slides .radio1slide {
+    order: -1;
+    opacity: 1;
+    width: 25%;
+    background-color: #3F3F3F;
+    transform: scaleY(1.1);
+}
 
+#radio2:checked~.slides .radio2slide {
+    order: -1;
+    opacity: 1;
+    width: 25%;
+    background-color: #3F3F3F;
+    transform: scaleY(1.1);
+}
+
+#radio3:checked~.slides .radio3slide {
+    order: -1;
+    opacity: 1;
+    width: 25%;
+    background-color: #3F3F3F;
+    transform: scaleY(1.1);
+}
+
+#radio4:checked~.slides .radio4slide {
+    order: -1;
+    opacity: 1;
+    width: 25%;
+    background-color: #3F3F3F;
+    transform: scaleY(1.1);
+
+}
 
 .labels {
     display: flex;
@@ -74,6 +108,7 @@ input {
     justify-content: flex-end;
     padding-right: 5%;
     margin: auto;
+
     height: 3vh;
 
 }
@@ -88,7 +123,33 @@ label {
     transition: 0.3s;
 }
 
+#radio1:checked~.labels>label[for="radio1"] {
+    background-color: #47D2E9;
+    width: 4vh;
+}
 
+#radio2:checked~.labels>label[for="radio2"] {
+    background-color: #47D2E9;
+    width: 4vh;
+}
+
+#radio3:checked~.labels>label[for="radio3"] {
+    background-color: #47D2E9;
+    width: 4vh;
+}
+
+#radio4:checked~.labels>label[for="radio4"] {
+    background-color: #47D2E9;
+    width: 4vh;
+}
+
+label:hover {
+    background-color: coral;
+}
+
+label:active {
+    background-color: rgb(252, 86, 25);
+}
 
 .captions {
     width: 50%;
@@ -108,4 +169,28 @@ label {
     color: coral;
 
     transition: 1s;
+}
+
+#radio1:checked~.captions .caption1 {
+    order: -1;
+    opacity: 1;
+    color: cornsilk;
+}
+
+#radio2:checked~.captions .caption2 {
+    order: -1;
+    opacity: 1;
+    color: cornsilk;
+}
+
+#radio3:checked~.captions .caption3 {
+    order: -1;
+    opacity: 1;
+    color: cornsilk;
+}
+
+#radio4:checked~.captions .caption4 {
+    order: -1;
+    opacity: 1;
+    color: cornsilk;
 }
