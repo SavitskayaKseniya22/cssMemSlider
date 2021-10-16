@@ -194,3 +194,50 @@ label:active {
     opacity: 1;
     color: cornsilk;
 }
+
+@media (max-width: 768px) {
+    .slider-container {
+        width: 80%;
+    }
+
+    .slider {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .slides {
+        order: 1;
+        height: 40vh;
+    }
+
+    .labels {
+        order: 2;
+        margin: 0;
+        margin-top: 5vh;
+        align-self: center;
+        justify-content: space-around;
+    }
+
+
+    .captions {
+        order: 3;
+        width: 80%;
+        align-self: flex-start;
+
+        margin: 0;
+        margin-top: 3vh;
+    }
+
+    .caption {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .slider-container {
+        width: 100%;
+    }
+
+}
