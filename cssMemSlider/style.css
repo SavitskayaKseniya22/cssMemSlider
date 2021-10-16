@@ -7,29 +7,41 @@ body {
     margin: 0;
 }
 
+p {
+    margin: 0;
+}
+
 .slider-container {
 
     width: 50%;
     height: 100vh;
     margin: 0 auto;
     display: flex;
-
     background-color: #3F3F3F;
+    flex-direction: column;
 
 
+}
+
+h1 {
+    margin: 0;
+    color: coral;
+    align-self: center;
+
+    height: 5vh;
+    display: flex;
+    align-items: flex-end;
 }
 
 .slider {
     width: 100%;
     flex-shrink: 0;
     overflow: hidden;
-    height: 100vh;
+    height: 95vh;
     padding-top: 5%;
     padding-bottom: 5%;
     display: flex;
     flex-wrap: wrap;
-
-
 
 
 }
@@ -153,7 +165,6 @@ label:active {
 
 .captions {
     width: 50%;
-    margin: auto;
     display: flex;
     overflow: hidden;
     padding-left: 5%;
@@ -167,7 +178,7 @@ label:active {
     font-size: 1.5rem;
     font-weight: bold;
     color: coral;
-
+    margin: auto;
     transition: 1s;
 }
 
@@ -222,7 +233,7 @@ label:active {
 
     .captions {
         order: 3;
-        width: 80%;
+        width: 100%;
         align-self: flex-start;
 
         margin: 0;
