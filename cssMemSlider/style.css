@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: coral;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.slider-container {
+
+    width: 50%;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    background-color: #3F3F3F;
+    flex-direction: column;
+
+
+}
+
+h1 {
+    margin: 0;
+    color: coral;
+    align-self: center;
+
+    height: 5vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.slider {
+    width: 100%;
+    flex-shrink: 0;
+    overflow: hidden;
+    height: 95vh;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-wrap: wrap;
+
+
+}
+
+.slides {
+    height: 70vh;
+    width: 400%;
+    display: flex;
+    flex-shrink: 0;
+    box-sizing: border-box;
+
+    column-gap: 5%;
+
+
+}
+
+.slides div {
+    width: 20%;
+    height: 100%;
+    padding: 1%;
+    opacity: 0;
+    transition: 1s all;
+    background-color: #47D2E9;
+
+}
+
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    border: 0.2rem solid coral;
+}
+
+input {
+    display: none;
+}
+
+#radio1:checked~.slides .radio1slide {
+    order: -1;
+    opacity: 1;
+    width: 25%;
+    background-color: #3F3F3F;
+    transform: scaleY(1.1);
+}
+
+#radio2:checked~.slides .radio2slide {
+    order: -1;
+    opacity: 1;
+    width: 25%;
+    background-color: #3F3F3F;
+    transform: scaleY(1.1);
+}
+
+#radio3:checked~.slides .radio3slide {
+    order: -1;
+    opacity: 1;
+    width: 25%;
+    background-color: #3F3F3F;
+    transform: scaleY(1.1);
+}
+
+#radio4:checked~.slides .radio4slide {
+    order: -1;
+    opacity: 1;
+    width: 25%;
+    background-color: #3F3F3F;
+    transform: scaleY(1.1);
+
+}
+
+.labels {
+    display: flex;
+    column-gap: 5%;
+    width: 50%;
+    align-self: flex-end;
+    justify-content: flex-end;
+    padding-right: 5%;
+    margin: auto;
+
+    height: 3vh;
+
+}
+
+label {
+    display: block;
+    width: 3vh;
+    cursor: pointer;
+    background-color: #47d1e980;
+    flex-shrink: 0;
+    flex-shrink: 0;
+    transition: 0.3s;
+}
+
+#radio1:checked~.labels>label[for="radio1"] {
+    background-color: #47D2E9;
+    width: 4vh;
+}
+
+#radio1:checked~.labels>label[for="radio1"]:hover {
+    background-color: coral;
+
+}
+
+#radio2:checked~.labels>label[for="radio2"] {
+    background-color: #47D2E9;
+    width: 4vh;
+}
+
+#radio2:checked~.labels>label[for="radio2"]:hover {
+    background-color: coral;
+}
+
+#radio3:checked~.labels>label[for="radio3"] {
+    background-color: #47D2E9;
+    width: 4vh;
+}
+
+#radio3:checked~.labels>label[for="radio3"]:hover {
+    background-color: coral;
+}
+
+#radio4:checked~.labels>label[for="radio4"] {
+    background-color: #47D2E9;
+    width: 4vh;
+}
+
+#radio4:checked~.labels>label[for="radio4"]:hover {
+    background-color: coral;
+}
+
+label:hover {
+    background-color: coral;
+
+
+}
+
+label:active {
+    background-color: rgb(252, 86, 25);
+}
+
+.captions {
+    width: 50%;
+    display: flex;
+    overflow: hidden;
+    padding-left: 0;
+    column-gap: 10%;
+
+}
+
+.caption {
+    width: 100%;
+    flex-shrink: 0;
+    opacity: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: coral;
+    margin: auto;
+    transition: 1s;
+
+}
+
+#radio1:checked~.captions .caption1 {
+    order: -1;
+    opacity: 1;
+    color: cornsilk;
+    padding-left: 10%;
+}
+
+#radio2:checked~.captions .caption2 {
+    order: -1;
+    opacity: 1;
+    color: cornsilk;
+    padding-left: 10%;
+}
+
+#radio3:checked~.captions .caption3 {
+    order: -1;
+    opacity: 1;
+    color: cornsilk;
+    padding-left: 10%;
+}
+
+#radio4:checked~.captions .caption4 {
+    order: -1;
+    opacity: 1;
+    color: cornsilk;
+    padding-left: 10%;
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        width: 80%;
+    }
+
+    .slider {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+    }
+
+    .slides {
+        order: 1;
+        height: 40vh;
+    }
+
+    .labels {
+        order: 2;
+        margin: 0;
+        margin-top: 5vh;
+        align-self: center;
+        justify-content: space-around;
+    }
+
+
+    .captions {
+        order: 3;
+        width: 100%;
+        align-self: flex-start;
+
+        margin: 0;
+        margin-top: 3vh;
+    }
+
+    .caption {
+        font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .slider-container {
+        width: 100%;
+    }
+
+    .captions {
+        padding-right: 10%;
+    }
+
+}
