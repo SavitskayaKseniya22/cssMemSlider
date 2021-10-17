@@ -187,6 +187,7 @@ label:active {
     display: flex;
     overflow: hidden;
     padding-left: 0;
+    column-gap: 10%;
 
 }
 
@@ -199,6 +200,7 @@ label:active {
     color: coral;
     margin: auto;
     transition: 1s;
+
 }
 
 #radio1:checked~.captions .caption1 {
